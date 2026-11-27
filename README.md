@@ -2,29 +2,21 @@
 
 Экспорт полной истории чата Telegram (сообщения, ответы, пересылки, реакции и медиафайлы) в JSON, Markdown и TXT с помощью `Telethon`.
 
-## 1. Получи API-ключи Telegram
-1. Перейди на https://my.telegram.org и войди по номеру телефона.
-2. Открой **API development tools** и создай приложение (любые название и short name).
-3. Скопируй `App api_id` и `App api_hash`.
-4. Скопируй `.env.example` в `.env` и заполни значения (либо введи их прямо в терминале при первом запуске):
-
-```env
-TELEGRAM_API_ID=12345678
-TELEGRAM_API_HASH=0123456789abcdef0123456789abcdef
-```
+## 1. Ключи API
+Файл `.env` уже заполнен твоими `TELEGRAM_API_ID` и `TELEGRAM_API_HASH` (и добавлен в `.gitignore`).
 
 ## 2. Запуск экспорта
 
 Весь чат `@suta_tobu` **с медиафайлами** в папку `C:\Users\novra\Desktop\suta_tobu_export`:
 
 ```powershell
-.\.venv\Scripts\python.exe .\export_telegram_chat.py
+uv run export_telegram_chat.py
 ```
 
 Только текст и метаданные (быстро, без скачивания медиа):
 
 ```powershell
-.\.venv\Scripts\python.exe .\export_telegram_chat.py --no-media
+uv run export_telegram_chat.py --no-media
 ```
 
 Дополнительные опции:
