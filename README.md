@@ -10,13 +10,13 @@
 Весь чат `@suta_tobu` **с медиафайлами** в папку `C:\Users\novra\Desktop\suta_tobu_export`:
 
 ```powershell
-uv run export_telegram_chat.py
+uv run --script export_telegram_chat.py
 ```
 
 Только текст и метаданные (быстро, без скачивания медиа):
 
 ```powershell
-uv run export_telegram_chat.py --no-media
+uv run --script export_telegram_chat.py --no-media
 ```
 
 Дополнительные опции:

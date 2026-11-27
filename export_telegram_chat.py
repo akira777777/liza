@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.11,<3.15"
+# dependencies = [
+#   "telethon>=1.46.0",
+#   "python-dotenv>=1.0.0",
+# ]
+# ///
 """Export a full Telegram chat (messages + media) via Telethon."""
 
 from __future__ import annotations
